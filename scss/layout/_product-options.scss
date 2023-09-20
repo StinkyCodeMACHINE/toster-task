@@ -47,13 +47,16 @@
   }
 
   &__main-image {
-    width: 358px;
     height: 232px;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
   }
 
   &__preview-images-container {
     display: flex;
     gap: u.rem(12);
+    justify-content: space-between;
   }
 
   &__preview-image-container {
@@ -82,6 +85,10 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    &:hover {
+      background: hsla(0, 0%, 83%, 0.5);
+    }
   }
 
   &__delivery-info-container {
@@ -123,6 +130,10 @@
     gap: 1rem;
     font-size: 10px;
     color: var(--black);
+
+    > div {
+      flex-grow: 1;
+    }
   }
 
   &__drop-down-list-heading {
@@ -132,8 +143,9 @@
 
   &__drop-down-list-container {
     position: relative;
-    width: 170px;
     height: 50px;
+    min-width: min(170px);
+    width: 100%;
 
     > select {
       appearance: none;
