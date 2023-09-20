@@ -1,0 +1,181 @@
+@use "../util/functions" as u;
+
+.product-options {
+  font-family: "Gotham Pro", sans-serif;
+  padding: u.rem(11) u.rem(17) u.rem(41.38) u.rem(17);
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(20);
+  &__rating-and-stuff-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: u.rem(12.067);
+    font-weight: 400;
+    color: var(--black);
+
+    > img {
+      width: 71.999px;
+      height: 17.676px;
+    }
+  }
+
+  &__best-selling-label {
+    color: var(--green);
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.03rem;
+  }
+
+  > h1 {
+    color: var(--black);
+    font-size: u.rem(19.168);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__slider {
+    overflow-x: hidden;
+    border-radius: u.rem(20);
+  }
+
+  &__main-image-container {
+    display: flex;
+    transition: transform 500ms ease-in;
+    width: 100%;
+  }
+
+  &__main-image {
+    width: 358px;
+    height: 232px;
+  }
+
+  &__preview-images-container {
+    display: flex;
+    gap: u.rem(12);
+  }
+
+  &__preview-image-container {
+    position: relative;
+    cursor: pointer;
+
+    &.preview-selected {
+      > .product-options__preview-overlay {
+        background: hsla(0, 0%, 83%, 0.5);
+      }
+    }
+  }
+
+  &__preview-image {
+    display: block;
+    width: 80px;
+    height: 66px;
+    object-fit: cover;
+    border-radius: u.rem(10);
+  }
+
+  &__preview-overlay {
+    border-radius: u.rem(10);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__delivery-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: u.rem(12);
+    font-size: u.rem(15.29);
+  }
+
+  &__delivery-info {
+    font-weight: 400;
+    color: var(--void);
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__rating-container {
+    display: flex;
+    align-items: center;
+    gap: u.rem(10);
+    color: var(--black);
+  }
+
+  &__product-stars-container {
+    display: flex;
+    gap: u.rem(4);
+    align-items: center;
+  }
+
+  &__star-icon {
+    width: 14px;
+    height: 13px;
+  }
+
+  &__drop-down-lists-container {
+    display: flex;
+    gap: 1rem;
+    font-size: 10px;
+    color: var(--black);
+  }
+
+  &__drop-down-list-heading {
+    text-align: center;
+    margin-bottom: u.rem(4);
+  }
+
+  &__drop-down-list-container {
+    position: relative;
+    width: 170px;
+    height: 50px;
+
+    > select {
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      background-color: var(--white);
+      font-size: u.rem(21.69);
+      font-weight: 700;
+      border-radius: 1rem;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      option {
+        cursor: pointer;
+      }
+    }
+
+    > img {
+      width: 19px;
+      height: 9px;
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__buy-button {
+    color: var(--white);
+    font-size: u.rem(30);
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: u.rem(15);
+    background: var(--green);
+    padding: u.rem(11.7) u.rem(20) u.rem(10.3) u.rem(18);
+    font-family: "Gotham Pro Med", sans-serif;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  > a {
+    width: 100%;
+  }
+}

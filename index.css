@@ -1,0 +1,291 @@
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("./assets/fonts/GothamPro.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro Med";
+  src: url("./assets/fonts/GothamPro-Medium.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("./assets/fonts/GothamPro-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --white: #ffffff;
+  --orange: #F19D2F;
+  --darker-orange: #E27500;
+  --light-orange: #FFD1AC;
+  --black: #2C2B31;
+  --void: #000000;
+  --green: #37D997;
+  --gray: #F0F0F0;
+}
+
+.header {
+  font-family: "Gotham Pro Med", sans-serif;
+}
+.header__special-offer-container {
+  background-color: var(--orange);
+  padding: 0.6875rem 0.8125rem 0.625rem 0.875rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 0.79338rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header__logo-container {
+  background-color: var(--light-orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.1875rem 5.375rem;
+  gap: 0.625rem;
+  color: var(--black);
+  font-size: 0.8418125rem;
+  font-weight: 400;
+}
+.header__logo {
+  width: 218px;
+  height: 31px;
+}
+
+.product-info {
+  font-family: "Gotham Pro", sans-serif;
+  width: 100%;
+  height: 281px;
+  background-image: url("./assets/images/big_shoes.png");
+  background-repeat: no-repeat;
+  padding: 0.875rem 0.8125rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+}
+.product-info__offer-timer-container {
+  background-color: var(--orange);
+  display: flex;
+  align-items: center;
+  width: 103px;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 0.634rem;
+  padding: 0.5625rem 0.44375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 0.6624375rem;
+  border-radius: 0.4438125rem;
+}
+.product-info__timer {
+  font-size: 1.328375rem;
+}
+.product-info__prices-container {
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  padding: 0.396875rem 0.4375rem 0.34625rem 0.4375rem;
+  flex-direction: column;
+  gap: 0.5069375rem;
+  border-radius: 0.3548125rem;
+  font-weight: 700;
+  font-size: 1.3938125rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.product-info__old-price-container {
+  font-size: 1.1298125rem;
+  text-decoration-color: var(--darker-orange);
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.product-info__old-price-container:after {
+  border-top: 3.514px solid var(--darker-orange);
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 45%;
+  left: -2%;
+  border-radius: 0.5rem;
+  width: 104%;
+}
+.product-info .strike-center:after {
+  border-top: 1px solid #000;
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  left: 0;
+}
+
+.product-options {
+  font-family: "Gotham Pro", sans-serif;
+  padding: 0.6875rem 1.0625rem 2.58625rem 1.0625rem;
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.product-options__rating-and-stuff-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 0.7541875rem;
+  font-weight: 400;
+  color: var(--black);
+}
+.product-options__rating-and-stuff-container > img {
+  width: 71.999px;
+  height: 17.676px;
+}
+.product-options__best-selling-label {
+  color: var(--green);
+  text-decoration-line: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: 0.03rem;
+}
+.product-options > h1 {
+  color: var(--black);
+  font-size: 1.198rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.product-options__slider {
+  overflow-x: hidden;
+  border-radius: 1.25rem;
+}
+.product-options__main-image-container {
+  display: flex;
+  transition: transform 500ms ease-in;
+  width: 100%;
+}
+.product-options__main-image {
+  width: 358px;
+  height: 232px;
+}
+.product-options__preview-images-container {
+  display: flex;
+  gap: 0.75rem;
+}
+.product-options__preview-image-container {
+  position: relative;
+  cursor: pointer;
+}
+.product-options__preview-image-container.preview-selected > .product-options__preview-overlay {
+  background: hsla(0, 0%, 83%, 0.5);
+}
+.product-options__preview-image {
+  display: block;
+  width: 80px;
+  height: 66px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.625rem;
+}
+.product-options__preview-overlay {
+  border-radius: 0.625rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.product-options__delivery-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.955625rem;
+}
+.product-options__delivery-info {
+  font-weight: 400;
+  color: var(--void);
+}
+.product-options__delivery-info span {
+  font-weight: 700;
+}
+.product-options__rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--black);
+}
+.product-options__product-stars-container {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.product-options__star-icon {
+  width: 14px;
+  height: 13px;
+}
+.product-options__drop-down-lists-container {
+  display: flex;
+  gap: 1rem;
+  font-size: 10px;
+  color: var(--black);
+}
+.product-options__drop-down-list-heading {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.product-options__drop-down-list-container {
+  position: relative;
+  width: 170px;
+  height: 50px;
+}
+.product-options__drop-down-list-container > select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white);
+  font-size: 1.355625rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.product-options__drop-down-list-container > select option {
+  cursor: pointer;
+}
+.product-options__drop-down-list-container > img {
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.product-options__buy-button {
+  color: var(--white);
+  font-size: 1.875rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0.9375rem;
+  background: var(--green);
+  padding: 0.73125rem 1.25rem 0.64375rem 1.125rem;
+  font-family: "Gotham Pro Med", sans-serif;
+  cursor: pointer;
+  width: 100%;
+}
+.product-options > a {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+@use "../util/functions" as u;
+
+.header {
+  font-family: "Gotham Pro Med", sans-serif;
+
+  &__special-offer-container {
+    background-color: var(--orange);
+    padding: u.rem(11) u.rem(13) u.rem(10) u.rem(14);
+    text-align: center;
+    color: var(--black);
+    font-size: 0.79338rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__logo-container {
+    background-color: var(--light-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: u.rem(19) u.rem(86);
+    gap: u.rem(10);
+    color: var(--black);
+    font-size: u.rem(13.469);
+    font-weight: 400;
+  }
+
+  &__logo {
+    width: 218px;
+    height: 31px;
+  }
+}
